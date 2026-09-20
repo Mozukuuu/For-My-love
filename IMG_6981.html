@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love 💛</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #f7e7a9;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            color: #594b2d;
+            padding: 18px 0;
+        }
+
+        .container {
+            background: #fff9df;
+            width: calc(100% - 30px);
+            max-width: 480px;
+            padding: 32px 24px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(91, 72, 25, 0.14);
+            border: 1px solid #ead99b;
+            position: relative;
+            z-index: 2;
+            animation: appear 1s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .heart {
+            font-size: 48px;
+            margin-bottom: 8px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
+        }
+
+        h1 {
+            font-size: 29px;
+            margin-bottom: 14px;
+            color: #a77b18;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            color: #675633;
+        }
+
+        button {
+            background: #c79a28;
+            color: #fffdf3;
+            border: none;
+            padding: 13px 24px;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.25s;
+            font-family: inherit;
+            box-shadow: 0 4px 10px rgba(117, 88, 18, 0.18);
+        }
+
+        button:hover {
+            background: #aa7f16;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
+        #letter {
+            display: none;
+            margin-top: 25px;
+            padding: 22px 19px;
+            background: #fffdf0;
+            border-radius: 8px;
+            border: 1px solid #eadfb7;
+            line-height: 1.85;
+            font-size: 15px;
+            text-align: left;
+            animation: appear 0.7s ease;
+        }
+
+        #letter p {
+            margin-bottom: 8px;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 15px;
+            font-style: italic;
+            color: #a77b18;
+        }
+
+        .footer {
+            margin-top: 24px;
+            font-size: 13px;
+            color: #89713a;
+        }
+
+        .small-text {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #967c3d;
+        }
+
+        /* Floating yellow hearts */
+
+        .floating-heart {
+            position: fixed;
+            bottom: -30px;
+            font-size: 20px;
+            animation: floatUp linear forwards;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.7;
+            }
+
+            90% {
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Phone adjustment */
+
+        @media (max-width: 480px) {
+
+            body {
+                align-items: flex-start;
+                padding: 15px 0;
+            }
+
+            .container {
+                width: calc(100% - 22px);
+                padding: 27px 17px;
+                margin: 0 auto;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .heart {
+                font-size: 43px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+            }
+
+            #letter {
+                padding: 19px 15px;
+                font-size: 14px;
+                line-height: 1.8;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 12px 21px;
+            }
+        }
+
+        @media (max-width: 350px) {
+
+            .container {
+                width: calc(100% - 16px);
+                padding: 23px 13px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            #letter {
+                padding: 16px 13px;
+                font-size: 13.5px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="heart">💛</div>
+
+        <!-- CHANGE HER NAME HERE -->
+        <h1>Hi, My Love!</h1>
+
+        <p class="subtitle">
+            I made this kasi para maka bawi sayo kahit papano.
+            <br>
+            Read well kalang my love, make sure to open this sa laptop or pc not ipad or cp. 💛
+        </p>
+
+        <button onclick="showLetter()" id="loveButton">
+            Open My Letter 💛
+        </button>
+
+        <div id="letter">
+
+            <!-- CHANGE THIS MESSAGE TO YOUR OWN -->
+
+            <p>
+                To my beautiful soon to be girlfriend (Mariah Cassy Calma), hehe
+            </p>
+
+            <br>
+
+            <p>
+                Nothing much naman my love i just thought i give you somthng.
+				kasi kumbager napa mahal na e, pero yun i just want to let you know
+				how much you mean to me as in kumbager may attachment issue na talaga siya napaganon nalang.
+            </p>
+
+            <br>
+
+            <p>
+                These past few days i really enjoyed the moments we shared together kumbager spokening nako neto 
+				pero yun nga and mga tawanan simpleng tampuhan at ano HUYY anooyyy pero yun im just so thankful for having you in my life 
+				my love.
+            </p>
+
+            <br>
+
+            <p>
+                Also na appreciate ko mga ginagawa mo for me like gumagawa ka talaga 
+				ng oras sakin tapos kahit busy ako alam mo kung pano ako gawan ng oras and thats what i like and love about you alam mo yan.
+				What i like about us is that kahit gano pa tayong dalawa ka busy tayo yung mag bibigay talga ng oras sa isat isa and kung gano tayo ka open sa isat isa alam mo yan mahal mo na 
+            </p>
+
+            <br>
+
+            <p>
+                Lastly, kung meron man akong nasasabing masama about you my love just let me know oki? ayoko naman na lagi tayo nag tatampuhan sa isat isa, and ayoko din yung masaya yung isa yung isa malungkot
+				and itama mo lang ako kung meron man akong mali kaya ko din namn itama dw. I know din na ma bubusy tayo next week or other weeks pero kaya yan my love laban lang dito lang 
+				naman ako lagi para sayo never na never kitang iiwan pag kailangan mo ko alam mo yan my love. Thats all my love thank you for always being there for meeeeee so thankful talaga me.
+            </p>
+
+            <br>
+
+            <p>
+                I love you so much, my love. 💛
+            </p>
+
+            <p class="signature">
+                Forever yours,<br>
+                Moises 💛
+            </p>
+
+        </div>
+
+        <p class="small-text">
+            This letter is for appreciating you ♡
+        </p>
+
+        <div class="footer">
+            I hope you'll like it my love mwaa 💛
+        </div>
+
+    </div>
+
+    <script>
+
+        function showLetter() {
+
+            const letter = document.getElementById("letter");
+            const button = document.getElementById("loveButton");
+
+            if (letter.style.display === "block") {
+
+                letter.style.display = "none";
+                button.innerHTML = "Open My Letter 💛";
+
+            } else {
+
+                letter.style.display = "block";
+                button.innerHTML = "Close My Letter 💛";
+
+                for (let i = 0; i < 12; i++) {
+                    createHeart();
+                }
+
+                setTimeout(function() {
+                    letter.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }, 200);
+            }
+        }
+
+
+        function createHeart() {
+
+            const heart = document.createElement("div");
+
+            heart.classList.add("floating-heart");
+
+            const hearts = [
+                "💛",
+                "💛",
+                "💛",
+                "💛",
+                "💛"
+            ];
+
+            heart.innerHTML =
+                hearts[Math.floor(Math.random() * hearts.length)];
+
+            heart.style.left =
+                Math.random() * 100 + "vw";
+
+            heart.style.animationDuration =
+                (4 + Math.random() * 5) + "s";
+
+            heart.style.fontSize =
+                (15 + Math.random() * 20) + "px";
+
+            document.body.appendChild(heart);
+
+            setTimeout(function() {
+                heart.remove();
+            }, 9000);
+        }
+
+
+        setInterval(createHeart, 700);
+
+    </script>
+
+</body>
+</html>
+
